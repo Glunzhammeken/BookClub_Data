@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BookClub_Data.Interfaces;
+using System;
 
 namespace BookClub_Data
 {
-    public class Message
+    public class Message : IIdentifiable
     {
         private int _messageId;
         private int _bookClubId;
@@ -10,7 +11,7 @@ namespace BookClub_Data
         private string _messageContent;
         private DateTime _timestamp;
 
-        public int MessageId
+        public int Id
         {
             get => _messageId;
             set

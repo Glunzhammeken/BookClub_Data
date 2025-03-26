@@ -11,9 +11,9 @@ namespace BookClub_DataTests
         public void BookIdTest()
         {
             Book book = new Book();
-            book.BookId = 1;
-            Assert.AreEqual(1, book.BookId);
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => book.BookId = -1);
+            book.Id = 1;
+            Assert.AreEqual(1, book.Id);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => book.Id = -1);
         }
 
         [TestMethod]

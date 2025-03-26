@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BookClub_Data.Interfaces;
+using System;
 
 namespace BookClub_Data
 {
-    public class Book
+    public class Book : IIdentifiable
     {
         private int _bookId;
         private string _title;
@@ -11,7 +12,7 @@ namespace BookClub_Data
         private DateTime _uploadDate;
         private string _filePath;
 
-        public int BookId
+        public int Id
         {
             get => _bookId;
             set

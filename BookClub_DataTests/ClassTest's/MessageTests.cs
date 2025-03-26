@@ -11,9 +11,9 @@ namespace BookClub_DataTests
         public void MessageIdTest()
         {
             Message message = new Message();
-            message.MessageId = 1;
-            Assert.AreEqual(1, message.MessageId);
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => message.MessageId = -1);
+            message.Id = 1;
+            Assert.AreEqual(1, message.Id);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => message.Id = -1);
         }
 
         [TestMethod]

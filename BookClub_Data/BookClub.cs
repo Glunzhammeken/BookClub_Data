@@ -1,16 +1,17 @@
-﻿using System;
+﻿using BookClub_Data.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace BookClub_Data
 {
-    public class BookClub
+    public class BookClub : IIdentifiable
     {
         private int _bookClubId;
         private int _bookId;
         private string _clubName;
         private int _creatorUserId;
 
-        public int BookClubId
+        public int Id
         {
             get => _bookClubId;
             set

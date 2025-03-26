@@ -11,9 +11,9 @@ namespace BookClub_DataTests
         public void UserIdTest()
         {
             User user = new User();
-            user.UserId = 1;
-            Assert.AreEqual(1, user.UserId);
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => user.UserId = -1);
+            user.Id = 1;
+            Assert.AreEqual(1, user.Id);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => user.Id = -1);
         }
 
         [TestMethod]

@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using BookClub_Data.Interfaces;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 
 namespace BookClub_Data
 {
-    public class User
+    public class User : IIdentifiable
     {
         private int _userId;
         private string _userName;
@@ -12,7 +13,7 @@ namespace BookClub_Data
         private string _passwordHash;
         private string _role;
 
-        public int UserId
+        public int Id
         {
             get => _userId;
             set
