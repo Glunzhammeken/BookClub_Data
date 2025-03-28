@@ -110,6 +110,9 @@ namespace BookClub_Data
             }
         }
 
+        
+            public ICollection<BookClub> BookClubs { get; set; } // Add this property
+
         /* kunne være usefull på et tidspukt
         public ICollection<Reference> References { get; set; }
         public ICollection<ChatRoom> ChatRooms { get; set; }

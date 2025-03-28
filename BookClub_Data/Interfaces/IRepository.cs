@@ -4,11 +4,11 @@ namespace BookClub_Data.Interfaces
 {
     public interface IRepository<T> where T : class, IIdentifiable
     {
-        List<T> GetList();
-        T GetItemById(int id);
-        T Add(T item);
-        T Remove(int id);
-        T Update(int id, T newData);
+        Task<List<T>> GetList();
+        Task<T> GetItemById(int id);
+        Task<T> Add(T item);
+        Task<T >Remove(int id);
+        Task<T> Update(int id, T newData);
     }
 }
 

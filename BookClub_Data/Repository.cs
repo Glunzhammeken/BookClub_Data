@@ -16,12 +16,12 @@ namespace BookClub_Data.Repositories
             _context = context;
         }
 
-        public async Task<List<T>> GetListAsync()
+        public async Task<List<T>> GetList()
         {
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetItemByIdAsync(int id)
+        public async Task<T> GetItemById(int id)
         {
             var item = await _context.Set<T>().FindAsync(id);
             if (item == null)
@@ -31,7 +31,7 @@ namespace BookClub_Data.Repositories
             return item;
         }
 
-        public async Task<T> AddAsync(T item)
+        public async Task<T> Add(T item)
         {
             if (item == null)
             {
@@ -42,9 +42,9 @@ namespace BookClub_Data.Repositories
             return item;
         }
 
-        public async Task<T> RemoveAsync(int id)
+        public async Task<T> Remove(int id)
         {
-            var item = await GetItemByIdAsync(id);
+            var item = await GetItemById(id);
             if (item == null)
             {
                 throw new ArgumentNullException("item is null");
@@ -54,7 +54,7 @@ namespace BookClub_Data.Repositories
             return item;
         }
 
-        public async Task<T> UpdateAsync(int id, T newData)
+        public async Task<T> Update(int id, T newData)
         {
             var existingItem = await _context.Set<T>().FindAsync(id);
             if (existingItem == null)
@@ -77,6 +77,8 @@ namespace BookClub_Data.Repositories
             await _context.SaveChangesAsync();
             return existingItem;
         }
+
+        
     }
 }
 

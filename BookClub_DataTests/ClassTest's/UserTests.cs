@@ -64,5 +64,3 @@ namespace BookClub_DataTests
         }
     }
 }
-
-
